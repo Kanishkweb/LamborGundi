@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+}
+.sky {
+  height: 100vh;
+  width: 100%;
+  background-image: url(background.jpg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: shakebody linear 6s infinite;
+  top: -50px;
+}
+.trees {
+  height: 100vh;
+  width: 800vw;
+  background-image: url(trees.png);
+  background-size: contain;
+  position: absolute;
+  top: -125px;
+  /* animation: carMove linear 12s infinite; */
+}
+
+.track {
+  height: 60vh;
+  width: 800vw;
+  background-image: url(track.png);
+  position: absolute;
+  top: 70vh;
+  background-repeat: repeat-x;
+  animation: carMove linear 10s infinite;
+}
+.car {
+  height: 100px;
+  width: 380px;
+  background-image: url(car_body.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 248px;
+  bottom: 220px;
+  animation: shake linear 0.3s infinite;
+}
+.wheel1 img {
+  width: 64px;
+  position: relative;
+  top: 37px;
+  left: 53px;
+  animation: wheelRotation linear 0.6s infinite;
+}
+.wheel2 img {
+  width: 55px;
+  position: relative;
+  top: -18px;
+  left: 245px;
+  animation: wheelRotation linear 0.6s infinite;
+}
+
+.heading {
+  color: black;
+  font-size: 2rem;
+  position: relative;
+  z-index: 9;
+  margin: auto;
+  display: flex;
+  margin: 50px;
+  font-size: 3rem;
+  justify-content: center;
+}
+
+.icondiv {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9;
+}
+.iconWrapper {
+  display: inline-block;
+  margin: 20px;
+}
+
+.metalBack {
+  background-color: rgb(0 0 0 / 68%);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.metalBack:active{
+  transform: scale(1.1);
+}
+
+.socialIcon {
+  text-decoration: none;
+  display: block;
+}
+
+.fa-solid {
+  font-size: 2em;
+  color: aqua;
+}
+.fa-solid:active{
+  color: red;
+}
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
+.speedometer {
+  width: 200px;
+  height: 100px;
+  background-color: rgba(14, 14, 14, 0.393);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  font-size: 3em;
+  position: relative;
+  margin: auto;
+  margin-bottom: 90px;
+  z-index: 9;
+}
+
+.unit {
+  font-size: 0.4em;
+}
+
+
+
+@keyframes wheelRotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes carMove {
+  100% {
+    transform: translate(-500vw);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shakebody {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+  .track {
+    top: 780px;
+    height: 40vh;
+    animation: carMove linear 4s infinite;
+  }
+
+  .car {
+    left: 20px;
+    bottom: 30px;
+    width: 366px;
+  }
+  .trees {
+    top: -50px;
+  }
+  .wheel2 img{
+    left: 234px;
+  }
+}
