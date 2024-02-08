@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lamborgundi</title>
-</head>
-<body>
-    <!-- header  -->
-    <header>
-        <!-- // -->
-    </header>
-    <main>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lamborgini</title>
+  </head>
 
+  <body>
+    <main>
+      <h1 class="heading" style="font-family: 'Ubuntu', sans-serif">
+        LamborGundi
+      </h1>
+      <!-- Speedometer -->
+      <div class="speedometer" id="speedometer">
+        <div class="speed">
+          <div class="speed-value" id="speedValue">0</div>
+          <div class="unit">km/h</div>
+        </div>
+      </div>
+      <!-- Icons Div -->
+      <div class="icondiv">
+        <!-- left icon -->
+        <div class="iconWrapper left">
+          <div class="metalBack lights" onclick="crossBtnHandler()">
+            <a href="#" class="socialIcon" title="Click here to open.">
+              <i class="fa-solid fa-xmark" style="padding-left: 5px"></i>
+            </a>
+          </div>
+          <div class="metalBack lights" onclick="petrolBtnHandler()">
+            <a href="#" class="socialIcon" title="Click here to open.">
+              <i class="fa-solid fa-gas-pump"></i>
+            </a>
+          </div>
+        </div>
+        <!-- right icon -->
+        <div class="iconWrapper right">
+          <div class="metalBack lights" onclick="musicBtnHandler()">
+            <a href="#" class="socialIcon" title="Click here to open.">
+              <i class="fa-solid fa-music"></i>
+            </a>
+          </div>
+          <div class="metalBack lights" onclick="hornBtnHandler()">
+            <a href="#" class="socialIcon" title="Click here to open.">
+              <i class="fa-solid fa-bullhorn"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Main Container Effect Control Room -->
+      <div class="container">
+        <div class="sky">
+          <div class="trees"></div>
+          <div class="track"></div>
+          <div class="car">
+            <div class="wheel1">
+              <img src="testWheel.png" alt="wheel" />
+            </div>
+            <div class="wheel2">
+              <img src="testWheel.png" alt="wheel" />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>
-        
-    </footer>
-</body>
+    <!-- script  -->
+    <script src="script.js"></script>
+  </body>
 </html>
